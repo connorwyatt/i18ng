@@ -6,7 +6,10 @@
   "module": "./index.js",
   "typings": "./index.d.ts",
   "scripts": {
-    "build": "ngc"
+    "build": "ngc",
+    "buildTools": "tsc -p ./tools/tsconfig.json",
+    "checkFormat": "node ./tools/checkFormat.js",
+    "formatFiles": "node ./tools/formatFiles.js"
   },
   "peerDependencies": {
     "@angular/core": "^2.4.6"
@@ -15,8 +18,12 @@
     "@angular/compiler": "^2.4.6",
     "@angular/compiler-cli": "^2.4.6",
     "@angular/core": "^2.4.6",
-    "rxjs": "^5.0.1",
+    "@types/vinyl": "^2.0.0",
+    "clang-format": "^1.0.46",
+    "glob": "^7.1.1",
+    "rxjs": "^5.1.0",
     "typescript": "^2.1.5",
+    "vinyl": "^2.0.1",
     "zone.js": "^0.7.2"
   }
 }
